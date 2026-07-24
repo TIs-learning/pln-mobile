@@ -1,0 +1,141 @@
+/* Setup warna modern pakai variabel */
+:root {
+    --pln-blue: #0099D8;
+    --dark-blue: #005B96;
+    --background: #F4F8FB;
+    --white: #FFFFFF;
+    --electric-yellow: #FFC107;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Styling Header & Navbar --- */
+header {
+    background-color: var(--pln-blue);
+    color: var(--white);
+    padding: 20px 60px; 
+}
+
+/* --- Styling Navigasi Atas --- */
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.nav-menu a, .nav-profile a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 26px;
+    transition: 0.3s ease;
+}
+
+.nav-profile a {
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.nav-menu a:hover, .nav-profile a:hover {
+    color: var(--electric-yellow); 
+}
+
+.nav-menu a.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--electric-yellow);
+    padding-bottom: 5px;
+}
+
+/* --- Styling Hero Section --- */
+.hero {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px; 
+}
+
+.hero-text {
+    max-width: 100%; 
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-utama {
+    background-color: var(--electric-yellow);
+    color: var(--text-dark);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s ease; 
+    display: inline-block;
+}
+
+.btn-utama:hover {
+    background-color: var(--white);
+    color: var(--pln-blue);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); 
+}
+
+/* --- Styling Footer --- */
+footer {
+    background-color: #333333;
+    color: #f0f8ff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    margin: 5px 0; 
+}
+
+.social-links {
+    margin-top: 15px; 
+}
+
+.social-links a {
+    color: #00A2E9; 
+    text-decoration: none; 
+    font-weight: bold;
+    margin: 0 10px; 
+}
+
+.social-links a:hover {
+    color: #ffffff; 
+    text-decoration: underline; 
+}
+
+.social-links img {
+    width: 2%; 
+    height: auto; 
+    vertical-align: middle; 
+    transition: transform 0.3s ease; 
+}
+
+.social-links img:hover {
+    transform: scale(1.2); 
+}
