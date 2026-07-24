@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLN Edu Mobile | Layanan Pengguna </title>
+    <link rel="icon" href="/asset/favicon_itpln.png">
+    <link rel="stylesheet" href="/home/global.css">
+    <link rel="stylesheet" href="style-layanan-pengguna.css">
+</head>
+<body>
+
+<!-- Header start -->
+<header>
+    <nav class="navbar-top">
+        <div class="nav-menu">
+            <a href="/home/home.html" class="nav-item active">Home</a>
+            <a href="/about/about-pln-mobile.html">About</a>
+            <a href="/layanan-pengguna/layanan-pengguna.html">Layanan Pengguna</a>
+            <a href="/dokumentasi/dokumentasi.html">Dokumentasi</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Panduan Cerdas PLN Mobile</h1>
+            <p>Satu aplikasi untuk segala kebutuhan listrikmu.</p>
+            <a href="/home/home.html#fitur" class="btn-utama">Jelajahi Fitur</a>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Main Start -->
+<main class="layanan-section">
+    <h2 class="judul-layanan">Pusat Simulasi & Tutorial Layanan</h2>
+    <p class="deskripsi-layanan">Pilih fitur di bawah ini untuk melihat panduan atau simulasi penggunaannya.</p>
+
+    <div class="layanan-container">
+        <!-- Sidebar Menu Kiri -->
+        <div class="sidebar-menu">
+            <!-- Nanti kita kasih fungsi JS onclick buat ganti isi iframe-nya -->
+            <button class="btn-menu active">Pembelian Token Listrik</button>
+            <button class="btn-menu">Pembayaran Tagihan</button>
+            <button class="btn-menu">Pelaporan Gangguan</button>
+            <button class="btn-menu">Permohonan Pasang Baru</button>
+            <button class="btn-menu">Tambah Daya</button>
+            <button class="btn-menu">Pemantauan Status Pengaduan</button>
+        </div>
+
+        <!-- Layar Iframe Kanan -->
+        <div class="iframe-container">
+            <!-- src-nya bisa lu ganti pakai link YouTube atau file html simulasi nanti -->
+            <iframe id="layar-simulasi" src="https://www.youtube.com/embed/SOhW2CKxeM8" frameborder="0" width="100%" height="500px" allowfullscreen></iframe>
+        </div>
+    </div>
+</main>
+<!-- Main End -->
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Louis Immanuel Arthuro Tambunan. All rights reserved.</p>
+        <p>UAS Sistem Multimedia | NIM: 202531186</p>
+    </div>
+
+    <div class="social-links">
+        <!-- link GitHub -->
+        <a href="https://github.com/TIs-learning/pln-mobile" target="_blank">
+            <img src="/asset/github-removebg.png" alt="Logo GitHub">
+        </a> 
+        
+        <!-- Link Email -->
+        <a href="mailto:louisimannueltambunan@gmail.com">
+            <img src="/asset/email-removebg.png" alt="Logo Email">
+        </a>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<script src="layanan-pengguna-script.js"></script>
+</body>
+</html>
