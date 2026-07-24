@@ -1,0 +1,45 @@
+/* --- Styling Khusus Halaman About --- */
+.about-section {
+    padding: 60px;
+    flex: 1; /* Biar footer tetep kedorong ke bawah layar */
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.about-container h2 {
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.intro {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.story-board h3 {
+    color: var(--pln-blue);
+    margin-top: 30px;
+    font-size: 24px;
+    border-bottom: 2px solid #e1f5fe;
+    padding-bottom: 10px;
+}
+
+.story-board p {
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-size: 23px;
+    text-align: justify;
+}
