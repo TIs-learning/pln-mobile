@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLN Edu Mobile</title>
+    <link rel="icon" href="/asset/favicon_itpln.png">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home-style.css">
+</head>
+<body>
+
+<!-- Music Start-->
+<audio id="musik-latar" loop autoplay>
+    <source id="sumber-musik" src="/asset/music-1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Wadah Tombol Musik -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 999; display: flex; gap: 10px;">
+    <button onclick="aturMusik()" style="padding: 10px; cursor: pointer; background-color: #0093dd; color: white; border: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        Play/Pause 🎵
+    </button>
+    <button onclick="gantiMusik()" style="padding: 10px; cursor: pointer; background-color: #fca311; color: #333; border: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        Ganti Musik 🔄
+    </button>
+</div>
+<!-- Music End -->
+
+<!-- Header start -->
+<header>
+    <nav class="navbar-top">
+        <div class="nav-menu">
+            <a href="home.html" class="nav-item active">Home</a>
+            <a href="/about/about-pln-mobile.html">About</a>
+            <a href="/layanan-pengguna/layanan-pengguna.html">Layanan Pengguna</a>
+            <a href="/dokumentasi/dokumentasi.html">Dokumentasi</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Panduan Cerdas PLN Mobile</h1>
+            <p>Satu aplikasi untuk segala kebutuhan listrikmu.</p>
+            <a href="#fitur" class="btn-utama">Jelajahi Fitur</a>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Main Start -->
+<main id="fitur">
+    <h2 class="judul-section">Fitur Utama PLN Mobile</h2>
+    <div class="grid-fitur">
+
+        <!-- Bagian Card 1 -->
+        <div class="card-fitur">
+            <div class="ikon">⚡</div>
+            <h3>Panduan Membeli Token Listrik</h3>
+            <p class="klik-panduan">Klik untuk panduan</p>
+        </div>
+
+        <!--Bagian Card 2 -->
+        <div class="card-fitur">
+            <div class="ikon">💳</div>
+            <h3>Panduan Membayar Tagihan Token Listrik</h3>
+            <p class="klik-panduan">Klik untuk panduan</p>
+        </div>
+
+        <!-- Bagian Card 3 -->
+        <div class="card-fitur">
+            <div class="ikon">🔧</div>
+            <h3>Panduan Cara Lapor Gangguan Listrik</h3>
+            <p class="klik-panduan">Klik untuk panduan</p>
+        </div>
+
+        <!-- Bagian Card 4 -->
+        <div class="card-fitur">
+            <div class="ikon">🏠</div>
+            <h3>Panduan Pemasangan Listrik Baru</h3>
+            <p class="klik-panduan">Klik untuk panduan</p>
+        </div>
+
+        <!-- Bagian Card 5 -->
+        <div class="card-fitur">
+            <div class="ikon">🔌</div>
+            <h3>Panduan Menambah Daya Listrik</h3>
+            <p class="klik-panduan">Klik untuk panduan</p>
+        </div>
+
+        <!-- Bagian Card 6 -->
+        <div class="card-fitur">
+            <div class="ikon">📋</div>
+            <h3>Panduan Cara Cek Status Pengaduan</h3>
+            <p class="klik-panduan">Klik untuk panduan</p>
+        </div>
+    </div>
+
+    <!-- Kerangka Pop-up (Modal) -->
+    <div id="modal-panduan" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-judul">Judul Fitur</h2>
+            <div id="modal-isi">
+                <!-- Isi panduan bakal disuntik lewat JavaScript nanti -->
+                <p>Panduan langkah-langkah akan muncul di sini.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="pln-mobile.js"></script>
+</main>
+<!-- Main End -->
+
+<!-- Footer Start -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Louis Immanuel Arthuro Tambunan. All rights reserved.</p>
+        <p>UAS Sistem Multimedia | NIM: 202531186</p>
+    </div>
+
+    <div class="social-links">
+        <!-- link GitHub -->
+        <a href="https://github.com/TIs-learning/pln-mobile" target="_blank">
+            <img src="/asset/github-removebg.png" alt="Logo GitHub">
+        </a> 
+        
+        <!-- Link Email -->
+        <a href="mailto:louisimannueltambunan@gmail.com">
+            <img src="/asset/email-removebg.png" alt="Logo Email">
+        </a>
+    </div>
+</footer>
+<!-- Footer End -->
+
+
+<!-- Script Music Start -->
+<script>
+    var musik = document.getElementById("musik-latar");
+    var sumber = document.getElementById("sumber-musik");
+    var laguSekarang = 1; 
+    
+    function aturMusik() {
+        if (musik.paused) {
+            musik.play();
+        } else {
+            musik.pause();
+        }
+    }
+
+    // Fungsi buat ganti antara lagu 1 dan lagu 2
+    function gantiMusik() {
+        if (laguSekarang === 1) {
+            sumber.src = "/asset/music-2.mp3"; // Ganti ke lagu 2
+            laguSekarang = 2;
+        } else {
+            sumber.src = "/asset/music-1.mp3"; // Balik ke lagu 1
+            laguSekarang = 1;
+        }
+        
+        musik.load(); // Wajib di-load ulang biar sumber lagunya ke-update
+        musik.play(); // Langsung mainkan setelah diganti
+    }
+</script>
+<!-- Script Music End -->
+</body>
+</html>
