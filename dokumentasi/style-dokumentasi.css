@@ -1,0 +1,72 @@
+/* Membungkus semua konten biar ada di tengah dan ukurannya pas */
+.dokumen-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #333;
+}
+
+/* Gaya untuk setiap kotak putih (Section) */
+.dokumen-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+/* Gaya untuk judul Section */
+.dokumen-section h2 {
+    color: #0093dd; /* Warna biru PLN */
+    border-bottom: 2px solid #0093dd;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+/* Mengatur jarak antar item A sampai K */
+.dokumen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Gaya untuk tiap poin A sampai K (efek kotak dengan garis biru di kiri) */
+.dokumen-item {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-left: 5px solid #0093dd;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.dokumen-item:hover {
+    transform: translateX(5px); /* Efek geser dikit pas disorot mouse */
+}
+
+.dokumen-item strong {
+    display: block;
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.dokumen-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Gaya untuk list angka di Ketentuan Tugas */
+.ketentuan-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.ketentuan-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #444;
+}
